@@ -1,0 +1,10 @@
+vstup: input 1
+sort vstup
+vstup_nalevo: left vstup
+nejmensi: > vstup_nalevo vstup
+procesor: id
+sort procesor
+sort nejmensi
+vstup_nalevo_2: left vstup
+porcesor_0_ma_min: < procesor nejmensi
+if porcesor_0_ma_min vstup vstup_nalevo_2

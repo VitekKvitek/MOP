@@ -47,7 +47,7 @@ for sell_index in range(order_count):
                 else:
                     previous.append(Deal(sell_index, None))
                     profits.append(profit)
-
+    
 if profits:
     print(max(profits))
 else:

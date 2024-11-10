@@ -1,0 +1,28 @@
+vstup: input 1
+nula: const 0
+l_vstup: left vstup
+r_vstup: right vstup
+
+zleva_jiny: != l_vstup vstup
+zprava_jiny: != r_vstup vstup
+
+
+hranice: | zleva_jiny zprava_jiny
+hodnota_hranice: if hranice vstup nula
+
+
+sort hodnota_hranice
+procesor: id
+levy_procesor: left procesor
+
+oteviraci_hranice_hodnota: left hodnota_hranice
+mozna_delka: - procesor levy_procesor
+
+stejne_hranice: = hodnota_hranice oteviraci_hranice_hodnota
+
+delka: if stejne_hranice mozna_delka nula
+
+sort procesor
+sort delka
+left vstup
+
