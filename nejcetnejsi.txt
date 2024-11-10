@@ -1,3 +1,4 @@
+#eso peso
 vstup: input 1
 nula: const 0
 l_vstup: left vstup
@@ -15,14 +16,18 @@ sort hodnota_hranice
 procesor: id
 levy_procesor: left procesor
 
-oteviraci_hranice_hodnota: left hodnota_hranice
+oteviraci_hranice_vstup: left vstup
+je_vedlejsi_hranice: left hranice
 mozna_delka: - procesor levy_procesor
+ 
 
-stejne_hranice: = hodnota_hranice oteviraci_hranice_hodnota
+stejny_vstup: = vstup oteviraci_hranice_vstup
+
+obe_hranice: & je_vedlejsi_hranice hranice
+stejne_hranice: & stejny_vstup obe_hranice
 
 delka: if stejne_hranice mozna_delka nula
 
 sort procesor
 sort delka
 left vstup
-
